@@ -1,0 +1,33 @@
+{% extends "index.html" %}
+
+{% block titulo %}
+<h1 class="mx-auto my-0 text-uppercase"> Recetas </h1>
+{%  endblock titulo %}
+
+{% block contenido %}
+
+    <table class="table">
+        <thread>
+            <tr>
+                <th>Id</th>
+                <th>remedio</th>
+                <th>codigo</th>
+            </tr>
+        </thread>
+        <tbody>
+        {% for c in recetas %}    
+            <tr>
+                <td>{{ c.id }}</td>
+                <td>{{ c.nombre_del_remedio }}</td>
+                <td>{{ c.codigo }}</td>
+  
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+
+
+
+                    
+{%  endblock contenido %}

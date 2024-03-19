@@ -1,0 +1,33 @@
+{% extends "index.html" %}
+
+{% block titulo %}
+<h1 class="mx-auto my-0 text-uppercase"> Medicos </h1>
+{%  endblock titulo %}
+
+{% block contenido %}
+
+    <table class="table">
+        <thread>
+            <tr>
+                <th>Id</th>
+                <th>nombre</th>
+                <th>apellido</th>
+                <th>especialización</th>
+                <th>mail</th>
+            </tr>
+        </thread>
+        <tbody>
+        {% for c in medicos %}    
+            <tr>
+                <td>{{ c.id }}</td>
+                <td>{{ c.nombre }}</td>
+                <td>{{ c.apellido }}</td>
+                <td>{{ c.especialización }}</td>
+                <td>{{ c.mail }}</td>
+                
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+                    
+{%  endblock contenido %}
